@@ -3,7 +3,7 @@ import type { RepositoriesResponse } from "interfaces/repositories.interface";
 import { githubApi } from "../api/api";
 import Card from "./ui/Card.astro";
 
-const { data } = await githubApi.get<RepositoriesResponse[]>(`/users/${import.meta.env.USERNAME_GITHUB}/repos`);
+const { data } = await githubApi.get<RepositoriesResponse[]>(`https://api.github.com/users/jblSomoza/repos`);
 ---
 
 <section
